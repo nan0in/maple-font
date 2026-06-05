@@ -1,0 +1,409 @@
+2026-06-05T09:45:30.2096110Z Current runner version: '2.334.0'
+2026-06-05T09:45:30.2121205Z ##[group]Runner Image Provisioner
+2026-06-05T09:45:30.2122174Z Hosted Compute Agent
+2026-06-05T09:45:30.2122749Z Version: 20260520.533
+2026-06-05T09:45:30.2123470Z Commit: 189110e25284a9812c124fd27b339e2fb4f2f9db
+2026-06-05T09:45:30.2124429Z Build Date: 2026-05-20T17:44:04Z
+2026-06-05T09:45:30.2125171Z Worker ID: {c5e20e65-102c-4dcc-a958-be9767be8603}
+2026-06-05T09:45:30.2125910Z Azure Region: westus
+2026-06-05T09:45:30.2126523Z ##[endgroup]
+2026-06-05T09:45:30.2128077Z ##[group]Operating System
+2026-06-05T09:45:30.2128749Z Ubuntu
+2026-06-05T09:45:30.2129256Z 24.04.4
+2026-06-05T09:45:30.2129852Z LTS
+2026-06-05T09:45:30.2130367Z ##[endgroup]
+2026-06-05T09:45:30.2131187Z ##[group]Runner Image
+2026-06-05T09:45:30.2131944Z Image: ubuntu-24.04
+2026-06-05T09:45:30.2132506Z Version: 20260525.161.1
+2026-06-05T09:45:30.2133793Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260525.161/images/ubuntu/Ubuntu2404-Readme.md
+2026-06-05T09:45:30.2135359Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260525.161
+2026-06-05T09:45:30.2136376Z ##[endgroup]
+2026-06-05T09:45:30.2137559Z ##[group]GITHUB_TOKEN Permissions
+2026-06-05T09:45:30.2139448Z Contents: write
+2026-06-05T09:45:30.2140535Z Metadata: read
+2026-06-05T09:45:30.2141379Z ##[endgroup]
+2026-06-05T09:45:30.2143602Z Secret source: Actions
+2026-06-05T09:45:30.2144477Z Prepare workflow directory
+2026-06-05T09:45:30.3151479Z Prepare all required actions
+2026-06-05T09:45:30.3188785Z Getting action download info
+2026-06-05T09:45:30.8498625Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-06-05T09:45:30.9863669Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-06-05T09:45:31.0944920Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-06-05T09:45:31.4244499Z Complete job name: custom-build
+2026-06-05T09:45:31.6153364Z ##[group]Run actions/checkout@v4
+2026-06-05T09:45:31.6154301Z with:
+2026-06-05T09:45:31.6154765Z   repository: nan0in/maple-font
+2026-06-05T09:45:31.6159070Z   token: ***
+2026-06-05T09:45:31.6159545Z   ssh-strict: true
+2026-06-05T09:45:31.6159998Z   ssh-user: git
+2026-06-05T09:45:31.6160448Z   persist-credentials: true
+2026-06-05T09:45:31.6161151Z   clean: true
+2026-06-05T09:45:31.6161627Z   sparse-checkout-cone-mode: true
+2026-06-05T09:45:31.6162175Z   fetch-depth: 1
+2026-06-05T09:45:31.6162617Z   fetch-tags: false
+2026-06-05T09:45:31.6163066Z   show-progress: true
+2026-06-05T09:45:31.6163524Z   lfs: false
+2026-06-05T09:45:31.6163946Z   submodules: false
+2026-06-05T09:45:31.6164408Z   set-safe-directory: true
+2026-06-05T09:45:31.6165155Z ##[endgroup]
+2026-06-05T09:45:31.7316983Z Syncing repository: nan0in/maple-font
+2026-06-05T09:45:31.7318763Z ##[group]Getting Git version info
+2026-06-05T09:45:31.7319530Z Working directory is '/home/runner/work/maple-font/maple-font'
+2026-06-05T09:45:31.7321004Z [command]/usr/bin/git version
+2026-06-05T09:45:31.7422870Z git version 2.54.0
+2026-06-05T09:45:31.7452000Z ##[endgroup]
+2026-06-05T09:45:31.7468499Z Temporarily overriding HOME='/home/runner/work/_temp/ba0f0a25-4530-4e29-8d2b-c85f636f64c7' before making global git config changes
+2026-06-05T09:45:31.7471880Z Adding repository directory to the temporary git global config as a safe directory
+2026-06-05T09:45:31.7483601Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/maple-font/maple-font
+2026-06-05T09:45:31.7528503Z Deleting the contents of '/home/runner/work/maple-font/maple-font'
+2026-06-05T09:45:31.7532515Z ##[group]Initializing the repository
+2026-06-05T09:45:31.7536380Z [command]/usr/bin/git init /home/runner/work/maple-font/maple-font
+2026-06-05T09:45:31.7636906Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-06-05T09:45:31.7638322Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-06-05T09:45:31.7639683Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-06-05T09:45:31.7640915Z hint: call:
+2026-06-05T09:45:31.7641400Z hint:
+2026-06-05T09:45:31.7642141Z hint: 	git config --global init.defaultBranch <name>
+2026-06-05T09:45:31.7643108Z hint:
+2026-06-05T09:45:31.7644138Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-06-05T09:45:31.7645258Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-06-05T09:45:31.7646146Z hint:
+2026-06-05T09:45:31.7646660Z hint: 	git branch -m <name>
+2026-06-05T09:45:31.7647164Z hint:
+2026-06-05T09:45:31.7647810Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-06-05T09:45:31.7649156Z Initialized empty Git repository in /home/runner/work/maple-font/maple-font/.git/
+2026-06-05T09:45:31.7654390Z [command]/usr/bin/git remote add origin https://github.com/nan0in/maple-font
+2026-06-05T09:45:31.7693799Z ##[endgroup]
+2026-06-05T09:45:31.7694616Z ##[group]Disabling automatic garbage collection
+2026-06-05T09:45:31.7697943Z [command]/usr/bin/git config --local gc.auto 0
+2026-06-05T09:45:31.7724901Z ##[endgroup]
+2026-06-05T09:45:31.7725654Z ##[group]Setting up auth
+2026-06-05T09:45:31.7731910Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-06-05T09:45:31.7763340Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-06-05T09:45:31.8082443Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-06-05T09:45:31.8109449Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-06-05T09:45:31.8327074Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-06-05T09:45:31.8355822Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-06-05T09:45:31.8580515Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-06-05T09:45:31.8614756Z ##[endgroup]
+2026-06-05T09:45:31.8615580Z ##[group]Fetching the repository
+2026-06-05T09:45:31.8623417Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +974773fe59bf9b33b307f05a26aa416404bae51e:refs/remotes/origin/variable
+2026-06-05T09:45:33.0203467Z From https://github.com/nan0in/maple-font
+2026-06-05T09:45:33.0205398Z  * [new ref]         974773fe59bf9b33b307f05a26aa416404bae51e -> origin/variable
+2026-06-05T09:45:33.0242552Z ##[endgroup]
+2026-06-05T09:45:33.0243482Z ##[group]Determining the checkout info
+2026-06-05T09:45:33.0244816Z ##[endgroup]
+2026-06-05T09:45:33.0250553Z [command]/usr/bin/git sparse-checkout disable
+2026-06-05T09:45:33.0295993Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-06-05T09:45:33.0322523Z ##[group]Checking out the ref
+2026-06-05T09:45:33.0328055Z [command]/usr/bin/git checkout --progress --force -B variable refs/remotes/origin/variable
+2026-06-05T09:45:33.1098176Z Switched to a new branch 'variable'
+2026-06-05T09:45:33.1099011Z branch 'variable' set up to track 'origin/variable'.
+2026-06-05T09:45:33.1112396Z ##[endgroup]
+2026-06-05T09:45:33.1154309Z [command]/usr/bin/git log -1 --format=%H
+2026-06-05T09:45:33.1175899Z 974773fe59bf9b33b307f05a26aa416404bae51e
+2026-06-05T09:45:33.2021691Z ##[group]Run actions/setup-python@v5
+2026-06-05T09:45:33.2022108Z with:
+2026-06-05T09:45:33.2022363Z   python-version: 3.12
+2026-06-05T09:45:33.2022636Z   cache: pip
+2026-06-05T09:45:33.2022908Z   cache-dependency-path: ./requirements.txt
+2026-06-05T09:45:33.2023245Z   check-latest: false
+2026-06-05T09:45:33.2026262Z   token: ***
+2026-06-05T09:45:33.2026526Z   update-environment: true
+2026-06-05T09:45:33.2027066Z   allow-prereleases: false
+2026-06-05T09:45:33.2027347Z   freethreaded: false
+2026-06-05T09:45:33.2027606Z ##[endgroup]
+2026-06-05T09:45:33.3818461Z ##[group]Installed versions
+2026-06-05T09:45:33.4251408Z Successfully set up CPython (3.12.13)
+2026-06-05T09:45:33.4252289Z ##[endgroup]
+2026-06-05T09:45:33.4604281Z [command]/opt/hostedtoolcache/Python/3.12.13/x64/bin/pip cache dir
+2026-06-05T09:45:35.3125278Z /home/runner/.cache/pip
+2026-06-05T09:45:35.6437409Z pip cache is not found
+2026-06-05T09:45:35.6898042Z ##[group]Run pip install -r requirements.txt
+2026-06-05T09:45:35.6898493Z [36;1mpip install -r requirements.txt[0m
+2026-06-05T09:45:35.6898780Z [36;1m[0m
+2026-06-05T09:45:35.6899344Z [36;1m# https://github.com/ryanoasis/nerd-fonts/blob/b3c1b0cf424ac32915cf4fd822c3938d4a815566/.github/workflows/release.yml#L144-L166[0m
+2026-06-05T09:45:35.6900219Z [36;1mif [[ "" == *"--font-patcher"* ]] || python build.py --dry | jq -e '.nerd_font.use_font_patcher == true' >/dev/null; then[0m
+2026-06-05T09:45:35.6901006Z [36;1m  sudo apt update -y -q[0m
+2026-06-05T09:45:35.6901340Z [36;1m  sudo apt install software-properties-common -y -q[0m
+2026-06-05T09:45:35.6901717Z [36;1m  sudo apt install python3-fontforge -y -q[0m
+2026-06-05T09:45:35.6902041Z [36;1m  sudo apt install fuse -y -q[0m
+2026-06-05T09:45:35.6902303Z [36;1m[0m
+2026-06-05T09:45:35.6902917Z [36;1m  curl -L "https://github.com/fontforge/fontforge/releases/download/20230101/FontForge-2023-01-01-a1dad3e-x86_64.AppImage" --output fontforge[0m
+2026-06-05T09:45:35.6903567Z [36;1m  chmod u+x fontforge[0m
+2026-06-05T09:45:35.6903823Z [36;1m  echo Try appimage[0m
+2026-06-05T09:45:35.6904078Z [36;1m  ./fontforge --version[0m
+2026-06-05T09:45:35.6904343Z [36;1m  export PATH=`pwd`:$PATH[0m
+2026-06-05T09:45:35.6904636Z [36;1m  echo "PATH=$PATH" >> $GITHUB_ENV[0m
+2026-06-05T09:45:35.6904936Z [36;1m  echo Try appimage with path[0m
+2026-06-05T09:45:35.6905215Z [36;1m  fontforge --version[0m
+2026-06-05T09:45:35.6905457Z [36;1mfi[0m
+2026-06-05T09:45:35.6938475Z shell: /usr/bin/bash -e {0}
+2026-06-05T09:45:35.6938750Z env:
+2026-06-05T09:45:35.6939029Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-06-05T09:45:35.6939509Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+2026-06-05T09:45:35.6939967Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-06-05T09:45:35.6940371Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-06-05T09:45:35.6941003Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-06-05T09:45:35.6941411Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+2026-06-05T09:45:35.6941739Z ##[endgroup]
+2026-06-05T09:45:36.7825677Z Ignoring brotlicffi: markers 'platform_python_implementation != "CPython"' don't match your environment
+2026-06-05T09:45:36.7827915Z Ignoring cffi: markers 'platform_python_implementation != "CPython" or sys_platform == "darwin"' don't match your environment
+2026-06-05T09:45:36.7830892Z Ignoring colorama: markers 'sys_platform == "win32"' don't match your environment
+2026-06-05T09:45:36.7833796Z Ignoring pycparser: markers '(implementation_name != "PyPy" and platform_python_implementation != "CPython") or (implementation_name != "PyPy" and sys_platform == "darwin")' don't match your environment
+2026-06-05T09:45:36.7837008Z Ignoring win32-setctime: markers 'sys_platform >= "win32"' don't match your environment
+2026-06-05T09:45:36.7839032Z Ignoring xattr: markers 'sys_platform == "darwin"' don't match your environment
+2026-06-05T09:45:36.9241806Z Collecting afdko==5.0.0 (from -r requirements.txt (line 3))
+2026-06-05T09:45:37.0446170Z   Downloading afdko-5.0.0-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (8.7 kB)
+2026-06-05T09:45:37.0590636Z Collecting attrs==26.1.0 (from -r requirements.txt (line 7))
+2026-06-05T09:45:37.0617212Z   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+2026-06-05T09:45:37.1464405Z Collecting booleanoperations==0.10.0 (from -r requirements.txt (line 9))
+2026-06-05T09:45:37.1493359Z   Downloading booleanoperations-0.10.0-py3-none-any.whl.metadata (6.2 kB)
+2026-06-05T09:45:37.1803595Z Collecting brotli==1.2.0 (from -r requirements.txt (line 14))
+2026-06-05T09:45:37.1828243Z   Downloading brotli-1.2.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.1 kB)
+2026-06-05T09:45:37.2664529Z Collecting cffsubr==0.4.0 (from -r requirements.txt (line 22))
+2026-06-05T09:45:37.2700375Z   Downloading cffsubr-0.4.0-py3-none-manylinux_2_28_x86_64.whl.metadata (1.7 kB)
+2026-06-05T09:45:37.2838709Z Collecting click==8.3.2 (from -r requirements.txt (line 26))
+2026-06-05T09:45:37.2865297Z   Downloading click-8.3.2-py3-none-any.whl.metadata (2.6 kB)
+2026-06-05T09:45:37.3678569Z Collecting defcon==0.12.2 (from -r requirements.txt (line 33))
+2026-06-05T09:45:37.3715279Z   Downloading defcon-0.12.2-py3-none-any.whl.metadata (3.8 kB)
+2026-06-05T09:45:37.4546605Z Collecting dehinter==4.0.0 (from -r requirements.txt (line 40))
+2026-06-05T09:45:37.5279354Z   Downloading dehinter-4.0.0-py3-none-any.whl.metadata (7.5 kB)
+2026-06-05T09:45:37.6075614Z Collecting fontfeatures==1.9.0 (from -r requirements.txt (line 42))
+2026-06-05T09:45:37.6113434Z   Downloading fontfeatures-1.9.0-py3-none-any.whl.metadata (3.3 kB)
+2026-06-05T09:45:37.6925480Z Collecting fontmath==0.10.0 (from -r requirements.txt (line 44))
+2026-06-05T09:45:37.6959619Z   Downloading fontmath-0.10.0-py2.py3-none-any.whl.metadata (921 bytes)
+2026-06-05T09:45:37.7792653Z Collecting fontparts==0.14.1 (from -r requirements.txt (line 51))
+2026-06-05T09:45:37.8498254Z   Downloading fontparts-0.14.1-py3-none-any.whl.metadata (5.9 kB)
+2026-06-05T09:45:37.8614373Z Collecting fontpens==0.2.4 (from -r requirements.txt (line 53))
+2026-06-05T09:45:37.9333641Z   Downloading fontPens-0.2.4-py2.py3-none-any.whl.metadata (1.6 kB)
+2026-06-05T09:45:38.0688588Z Collecting fonttools==4.62.1 (from -r requirements.txt (line 55))
+2026-06-05T09:45:38.0724345Z   Downloading fonttools-4.62.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (117 kB)
+2026-06-05T09:45:38.1635499Z Collecting foundrytools==0.1.6 (from -r requirements.txt (line 73))
+2026-06-05T09:45:38.2371504Z   Downloading foundrytools-0.1.6-py3-none-any.whl.metadata (23 kB)
+2026-06-05T09:45:38.3225835Z Collecting foundrytools-cli==2.1.1 (from -r requirements.txt (line 75))
+2026-06-05T09:45:38.3949396Z   Downloading foundrytools_cli-2.1.1-py3-none-any.whl.metadata (4.0 kB)
+2026-06-05T09:45:38.4824461Z Collecting glyphslib==6.12.7 (from -r requirements.txt (line 77))
+2026-06-05T09:45:38.4856295Z   Downloading glyphslib-6.12.7-py3-none-any.whl.metadata (8.3 kB)
+2026-06-05T09:45:38.4964235Z Collecting loguru==0.7.3 (from -r requirements.txt (line 79))
+2026-06-05T09:45:38.4988511Z   Downloading loguru-0.7.3-py3-none-any.whl.metadata (22 kB)
+2026-06-05T09:45:38.6837710Z Collecting lxml==6.0.2 (from -r requirements.txt (line 81))
+2026-06-05T09:45:38.6864687Z   Downloading lxml-6.0.2-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.6 kB)
+2026-06-05T09:45:38.6995409Z Collecting markdown-it-py==4.0.0 (from -r requirements.txt (line 86))
+2026-06-05T09:45:38.7019466Z   Downloading markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+2026-06-05T09:45:38.7132758Z Collecting mdurl==0.1.2 (from -r requirements.txt (line 88))
+2026-06-05T09:45:38.7156673Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+2026-06-05T09:45:38.7956724Z Collecting mutatormath==3.0.1 (from -r requirements.txt (line 90))
+2026-06-05T09:45:38.8011404Z   Downloading MutatorMath-3.0.1-py2.py3-none-any.whl.metadata (10 kB)
+2026-06-05T09:45:38.9006515Z Collecting openstep-plist==0.5.2 (from -r requirements.txt (line 92))
+2026-06-05T09:45:38.9047924Z   Downloading openstep_plist-0.5.2-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (1.2 kB)
+2026-06-05T09:45:38.9198143Z Collecting pathvalidate==3.3.1 (from -r requirements.txt (line 94))
+2026-06-05T09:45:38.9225819Z   Downloading pathvalidate-3.3.1-py3-none-any.whl.metadata (12 kB)
+2026-06-05T09:45:38.9524738Z Collecting pyclipper==1.4.0 (from -r requirements.txt (line 96))
+2026-06-05T09:45:38.9561058Z   Downloading pyclipper-1.4.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (8.6 kB)
+2026-06-05T09:45:38.9713428Z Collecting pygments==2.20.0 (from -r requirements.txt (line 100))
+2026-06-05T09:45:38.9736771Z   Downloading pygments-2.20.0-py3-none-any.whl.metadata (2.5 kB)
+2026-06-05T09:45:39.0582273Z Collecting python-minifier==3.1.0 (from -r requirements.txt (line 102))
+2026-06-05T09:45:39.0614318Z   Downloading python_minifier-3.1.0-py3-none-any.whl.metadata (6.8 kB)
+2026-06-05T09:45:39.0889907Z Collecting rich==14.3.3 (from -r requirements.txt (line 104))
+2026-06-05T09:45:39.0921552Z   Downloading rich-14.3.3-py3-none-any.whl.metadata (18 kB)
+2026-06-05T09:45:39.1576720Z Collecting setuptools==82.0.1 (from -r requirements.txt (line 106))
+2026-06-05T09:45:39.1604611Z   Downloading setuptools-82.0.1-py3-none-any.whl.metadata (6.5 kB)
+2026-06-05T09:45:39.2015510Z Collecting skia-pathops==0.9.2 (from -r requirements.txt (line 108))
+2026-06-05T09:45:39.2048433Z   Downloading skia_pathops-0.9.2-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)
+2026-06-05T09:45:39.2256553Z Collecting tqdm==4.67.3 (from -r requirements.txt (line 112))
+2026-06-05T09:45:39.2281136Z   Downloading tqdm-4.67.3-py3-none-any.whl.metadata (57 kB)
+2026-06-05T09:45:39.3161472Z Collecting ttfautohint-py==0.6.0 (from -r requirements.txt (line 114))
+2026-06-05T09:45:39.3200098Z   Downloading ttfautohint_py-0.6.0-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.1 kB)
+2026-06-05T09:45:39.3331118Z Collecting typing-extensions==4.15.0 (from -r requirements.txt (line 116))
+2026-06-05T09:45:39.3356172Z   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+2026-06-05T09:45:39.4172557Z Collecting ufo-extractor==0.8.1 (from -r requirements.txt (line 118))
+2026-06-05T09:45:39.4205120Z   Downloading ufo_extractor-0.8.1-py2.py3-none-any.whl.metadata (4.6 kB)
+2026-06-05T09:45:39.5269656Z Collecting ufo2ft==3.7.1 (from -r requirements.txt (line 120))
+2026-06-05T09:45:39.6070558Z   Downloading ufo2ft-3.7.1-py3-none-any.whl.metadata (14 kB)
+2026-06-05T09:45:39.6222710Z Collecting ufolib2==0.18.1 (from -r requirements.txt (line 122))
+2026-06-05T09:45:39.6257470Z   Downloading ufolib2-0.18.1-py3-none-any.whl.metadata (1.7 kB)
+2026-06-05T09:45:39.7056560Z Collecting ufonormalizer==0.6.3 (from -r requirements.txt (line 126))
+2026-06-05T09:45:39.7111946Z   Downloading ufonormalizer-0.6.3-py3-none-any.whl.metadata (4.4 kB)
+2026-06-05T09:45:39.7914833Z Collecting ufoprocessor==1.14.1 (from -r requirements.txt (line 128))
+2026-06-05T09:45:39.7947032Z   Downloading ufoprocessor-1.14.1-py2.py3-none-any.whl.metadata (5.7 kB)
+2026-06-05T09:45:39.8283307Z Collecting unicodedata2==17.0.1 (from -r requirements.txt (line 130))
+2026-06-05T09:45:39.8343306Z   Downloading unicodedata2-17.0.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.4 kB)
+2026-06-05T09:45:39.8694649Z Collecting zopfli==0.4.1 (from -r requirements.txt (line 138))
+2026-06-05T09:45:39.8731036Z   Downloading zopfli-0.4.1-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.5 kB)
+2026-06-05T09:45:40.3124508Z Downloading afdko-5.0.0-cp312-cp312-manylinux_2_28_x86_64.whl (3.4 MB)
+2026-06-05T09:45:40.5844601Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 11.9 MB/s  0:00:00
+2026-06-05T09:45:40.5873640Z Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+2026-06-05T09:45:40.5926838Z Downloading booleanoperations-0.10.0-py3-none-any.whl (19 kB)
+2026-06-05T09:45:40.5971139Z Downloading brotli-1.2.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+2026-06-05T09:45:40.6075928Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 194.9 MB/s  0:00:00
+2026-06-05T09:45:40.6112861Z Downloading cffsubr-0.4.0-py3-none-manylinux_2_28_x86_64.whl (1.1 MB)
+2026-06-05T09:45:40.6207092Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 167.8 MB/s  0:00:00
+2026-06-05T09:45:40.6234519Z Downloading click-8.3.2-py3-none-any.whl (108 kB)
+2026-06-05T09:45:40.6291302Z Downloading defcon-0.12.2-py3-none-any.whl (232 kB)
+2026-06-05T09:45:40.6369404Z Downloading dehinter-4.0.0-py3-none-any.whl (15 kB)
+2026-06-05T09:45:40.6442532Z Downloading fontfeatures-1.9.0-py3-none-any.whl (104 kB)
+2026-06-05T09:45:40.6504498Z Downloading fontmath-0.10.0-py2.py3-none-any.whl (32 kB)
+2026-06-05T09:45:40.7295574Z Downloading fontparts-0.14.1-py3-none-any.whl (166 kB)
+2026-06-05T09:45:40.8061204Z Downloading fontPens-0.2.4-py2.py3-none-any.whl (19 kB)
+2026-06-05T09:45:40.8104968Z Downloading fonttools-4.62.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+2026-06-05T09:45:40.8319435Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 247.1 MB/s  0:00:00
+2026-06-05T09:45:40.9129171Z Downloading foundrytools-0.1.6-py3-none-any.whl (1.5 MB)
+2026-06-05T09:45:40.9927860Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 15.7 MB/s  0:00:00
+2026-06-05T09:45:41.0633782Z Downloading foundrytools_cli-2.1.1-py3-none-any.whl (53 kB)
+2026-06-05T09:45:41.0693423Z Downloading glyphslib-6.12.7-py3-none-any.whl (910 kB)
+2026-06-05T09:45:41.0776943Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 910.6/910.6 kB 137.0 MB/s  0:00:00
+2026-06-05T09:45:41.0802237Z Downloading loguru-0.7.3-py3-none-any.whl (61 kB)
+2026-06-05T09:45:41.0849959Z Downloading lxml-6.0.2-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.3 MB)
+2026-06-05T09:45:41.1138742Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.3/5.3 MB 207.7 MB/s  0:00:00
+2026-06-05T09:45:41.1165716Z Downloading markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+2026-06-05T09:45:41.1214340Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+2026-06-05T09:45:41.1316487Z Downloading MutatorMath-3.0.1-py2.py3-none-any.whl (31 kB)
+2026-06-05T09:45:41.1358502Z Downloading openstep_plist-0.5.2-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (901 kB)
+2026-06-05T09:45:41.1480000Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 901.7/901.7 kB 135.3 MB/s  0:00:00
+2026-06-05T09:45:41.1503871Z Downloading pathvalidate-3.3.1-py3-none-any.whl (24 kB)
+2026-06-05T09:45:41.1573708Z Downloading pyclipper-1.4.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (978 kB)
+2026-06-05T09:45:41.1643626Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 978.2/978.2 kB 152.1 MB/s  0:00:00
+2026-06-05T09:45:41.1668035Z Downloading pygments-2.20.0-py3-none-any.whl (1.2 MB)
+2026-06-05T09:45:41.1751457Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 165.6 MB/s  0:00:00
+2026-06-05T09:45:41.1777344Z Downloading python_minifier-3.1.0-py3-none-any.whl (61 kB)
+2026-06-05T09:45:41.1824937Z Downloading rich-14.3.3-py3-none-any.whl (310 kB)
+2026-06-05T09:45:41.1881596Z Downloading setuptools-82.0.1-py3-none-any.whl (1.0 MB)
+2026-06-05T09:45:41.1952712Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 166.4 MB/s  0:00:00
+2026-06-05T09:45:41.2731900Z Downloading skia_pathops-0.9.2-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.3 MB)
+2026-06-05T09:45:41.2954481Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 153.6 MB/s  0:00:00
+2026-06-05T09:45:41.2980273Z Downloading tqdm-4.67.3-py3-none-any.whl (78 kB)
+2026-06-05T09:45:41.3037849Z Downloading ttfautohint_py-0.6.0-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (13.8 MB)
+2026-06-05T09:45:41.4023105Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.8/13.8 MB 145.5 MB/s  0:00:00
+2026-06-05T09:45:41.4050848Z Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+2026-06-05T09:45:41.4811976Z Downloading ufo_extractor-0.8.1-py2.py3-none-any.whl (24 kB)
+2026-06-05T09:45:41.4880883Z Downloading ufo2ft-3.7.1-py3-none-any.whl (165 kB)
+2026-06-05T09:45:41.4974310Z Downloading ufolib2-0.18.1-py3-none-any.whl (53 kB)
+2026-06-05T09:45:41.5026653Z Downloading ufonormalizer-0.6.3-py3-none-any.whl (18 kB)
+2026-06-05T09:45:41.5081949Z Downloading ufoprocessor-1.14.1-py2.py3-none-any.whl (38 kB)
+2026-06-05T09:45:41.5130096Z Downloading unicodedata2-17.0.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (531 kB)
+2026-06-05T09:45:41.5195460Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 531.9/531.9 kB 83.3 MB/s  0:00:00
+2026-06-05T09:45:41.5247416Z Downloading zopfli-0.4.1-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (829 kB)
+2026-06-05T09:45:41.5310898Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 829.4/829.4 kB 138.4 MB/s  0:00:00
+2026-06-05T09:45:41.7160430Z Installing collected packages: unicodedata2, brotli, zopfli, ufonormalizer, typing-extensions, ttfautohint-py, tqdm, skia-pathops, setuptools, python-minifier, pygments, pyclipper, pathvalidate, openstep-plist, mdurl, lxml, loguru, fonttools, click, attrs, markdown-it-py, fontpens, fontmath, fontfeatures, dehinter, cffsubr, booleanoperations, ufolib2, ufo2ft, ufo-extractor, rich, defcon, mutatormath, glyphslib, fontparts, ufoprocessor, afdko, foundrytools, foundrytools-cli
+2026-06-05T09:45:46.4013096Z 
+2026-06-05T09:45:46.4051355Z Successfully installed afdko-5.0.0 attrs-26.1.0 booleanoperations-0.10.0 brotli-1.2.0 cffsubr-0.4.0 click-8.3.2 defcon-0.12.2 dehinter-4.0.0 fontfeatures-1.9.0 fontmath-0.10.0 fontparts-0.14.1 fontpens-0.2.4 fonttools-4.62.1 foundrytools-0.1.6 foundrytools-cli-2.1.1 glyphslib-6.12.7 loguru-0.7.3 lxml-6.0.2 markdown-it-py-4.0.0 mdurl-0.1.2 mutatormath-3.0.1 openstep-plist-0.5.2 pathvalidate-3.3.1 pyclipper-1.4.0 pygments-2.20.0 python-minifier-3.1.0 rich-14.3.3 setuptools-82.0.1 skia-pathops-0.9.2 tqdm-4.67.3 ttfautohint-py-0.6.0 typing-extensions-4.15.0 ufo-extractor-0.8.1 ufo2ft-3.7.1 ufolib2-0.18.1 ufonormalizer-0.6.3 ufoprocessor-1.14.1 unicodedata2-17.0.1 zopfli-0.4.1
+2026-06-05T09:45:46.4058858Z 
+2026-06-05T09:45:46.4059293Z [notice] A new release of pip is available: 26.1.1 -> 26.1.2
+2026-06-05T09:45:46.4060008Z [notice] To update, run: pip install --upgrade pip
+2026-06-05T09:45:46.9229992Z ##[group]Run build_args="--archive"
+2026-06-05T09:45:46.9230356Z [36;1mbuild_args="--archive"[0m
+2026-06-05T09:45:46.9230926Z [36;1mif [ "false" == "true" ]; then[0m
+2026-06-05T09:45:46.9231218Z [36;1m  build_args="$build_args --cn"[0m
+2026-06-05T09:45:46.9231499Z [36;1mfi[0m
+2026-06-05T09:45:46.9231691Z [36;1mif [ "false" == "true" ]; then[0m
+2026-06-05T09:45:46.9232297Z [36;1m  build_args="$build_args --normal"[0m
+2026-06-05T09:45:46.9232692Z [36;1mfi[0m
+2026-06-05T09:45:46.9232932Z [36;1mif [ "false" == "true" ]; then[0m
+2026-06-05T09:45:46.9233220Z [36;1m  build_args="$build_args --no-liga"[0m
+2026-06-05T09:45:46.9233501Z [36;1mfi[0m
+2026-06-05T09:45:46.9233700Z [36;1mif [ "false" == "true" ]; then[0m
+2026-06-05T09:45:46.9233995Z [36;1m  build_args="$build_args --no-hinted"[0m
+2026-06-05T09:45:46.9234275Z [36;1mfi[0m
+2026-06-05T09:45:46.9234476Z [36;1mif [ "default" != "default" ]; then[0m
+2026-06-05T09:45:46.9234825Z [36;1m  build_args="$build_args --width default"[0m
+2026-06-05T09:45:46.9235105Z [36;1mfi[0m
+2026-06-05T09:45:46.9235297Z [36;1mcase "default" in[0m
+2026-06-05T09:45:46.9235528Z [36;1m  default)[0m
+2026-06-05T09:45:46.9235759Z [36;1m    build_args="$build_args --nf"[0m
+2026-06-05T09:45:46.9236225Z [36;1m    ;;[0m
+2026-06-05T09:45:46.9236430Z [36;1m  mono)[0m
+2026-06-05T09:45:46.9236654Z [36;1m    build_args="$build_args --nf-mono"[0m
+2026-06-05T09:45:46.9236925Z [36;1m    ;;[0m
+2026-06-05T09:45:46.9237122Z [36;1m  proportional)[0m
+2026-06-05T09:45:46.9237378Z [36;1m    build_args="$build_args --nf-propo"[0m
+2026-06-05T09:45:46.9237647Z [36;1m    ;;[0m
+2026-06-05T09:45:46.9237831Z [36;1mesac[0m
+2026-06-05T09:45:46.9238097Z [36;1mif [ -n "calt, cv01, cv32, cv34, cv35, cv36, ss06" ]; then[0m
+2026-06-05T09:45:46.9238535Z [36;1m  build_args="$build_args --feat calt, cv01, cv32, cv34, cv35, cv36, ss06"[0m
+2026-06-05T09:45:46.9238909Z [36;1mfi[0m
+2026-06-05T09:45:46.9239107Z [36;1mif [ -n "" ]; then[0m
+2026-06-05T09:45:46.9239354Z [36;1m  build_args="$build_args "[0m
+2026-06-05T09:45:46.9239601Z [36;1mfi[0m
+2026-06-05T09:45:46.9239776Z [36;1m[0m
+2026-06-05T09:45:46.9239996Z [36;1mecho "BUILD_ARGS=$build_args" >> $GITHUB_ENV[0m
+2026-06-05T09:45:46.9240300Z [36;1mpython build.py $build_args[0m
+2026-06-05T09:45:46.9268601Z shell: /usr/bin/bash -e {0}
+2026-06-05T09:45:46.9268845Z env:
+2026-06-05T09:45:46.9269112Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-06-05T09:45:46.9269552Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+2026-06-05T09:45:46.9269975Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-06-05T09:45:46.9270349Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-06-05T09:45:46.9271010Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-06-05T09:45:46.9271398Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+2026-06-05T09:45:46.9271717Z ##[endgroup]
+2026-06-05T09:45:47.1101588Z usage: build.py [-h] [-v] [-d] [--debug] [-n] [--feat FEAT] [--apply-fea-file]
+2026-06-05T09:45:47.1102403Z                 [--hinted | --no-hinted] [--liga | --no-liga]
+2026-06-05T09:45:47.1103034Z                 [--keep-infinite-arrow] [--infinite-arrow] [--remove-tag-liga]
+2026-06-05T09:45:47.1103734Z                 [--line-height LINE_HEIGHT] [--width {default,narrow,slim}]
+2026-06-05T09:45:47.1104308Z                 [--nf-mono] [--nf-propo] [--cn-narrow]
+2026-06-05T09:45:47.1104859Z                 [--cn-scale-factor CN_SCALE_FACTOR] [--nf | --no-nf]
+2026-06-05T09:45:47.1105494Z                 [--cn | --no-cn] [--cn-both] [--ttf-only] [--least-styles]
+2026-06-05T09:45:47.1106052Z                 [--font-patcher] [--cache] [--cn-rebuild] [--archive]
+2026-06-05T09:45:47.1106860Z build.py: error: unrecognized arguments: cv01, cv32, cv34, cv35, cv36, ss06
+2026-06-05T09:45:47.1363233Z ##[error]Process completed with exit code 2.
+2026-06-05T09:45:47.1489974Z ##[group]Run if [ -f fonts/issue.fea ]
+2026-06-05T09:45:47.1490322Z [36;1mif [ -f fonts/issue.fea ][0m
+2026-06-05T09:45:47.1490844Z [36;1mthen[0m
+2026-06-05T09:45:47.1491101Z [36;1m  echo 'exists=true' >> $GITHUB_OUTPUT[0m
+2026-06-05T09:45:47.1491387Z [36;1melse[0m
+2026-06-05T09:45:47.1491608Z [36;1m  echo 'exists=false' >> $GITHUB_OUTPUT[0m
+2026-06-05T09:45:47.1491903Z [36;1mfi[0m
+2026-06-05T09:45:47.1519678Z shell: /usr/bin/bash -e {0}
+2026-06-05T09:45:47.1519927Z env:
+2026-06-05T09:45:47.1520196Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-06-05T09:45:47.1520883Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+2026-06-05T09:45:47.1521328Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-06-05T09:45:47.1521705Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-06-05T09:45:47.1522081Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-06-05T09:45:47.1522513Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+2026-06-05T09:45:47.1522977Z   BUILD_ARGS: --archive --nf --feat calt, cv01, cv32, cv34, cv35, cv36, ss06
+2026-06-05T09:45:47.1523356Z ##[endgroup]
+2026-06-05T09:45:47.1774640Z ##[group]Run if [ ! -d "fonts/archive" ]; then
+2026-06-05T09:45:47.1775020Z [36;1mif [ ! -d "fonts/archive" ]; then[0m
+2026-06-05T09:45:47.1775425Z [36;1m  echo "Error: Failed to build font, please check [Run custom script] step."[0m
+2026-06-05T09:45:47.1776004Z [36;1m  exit 1[0m
+2026-06-05T09:45:47.1776207Z [36;1mfi[0m
+2026-06-05T09:45:47.1776428Z [36;1mecho "### Build arguments" >> NOTES[0m
+2026-06-05T09:45:47.1776704Z [36;1mecho "\`\`\`" >> NOTES[0m
+2026-06-05T09:45:47.1776991Z [36;1mecho "python build.py $BUILD_ARGS" >> NOTES[0m
+2026-06-05T09:45:47.1777292Z [36;1mecho "\`\`\`" >> NOTES[0m
+2026-06-05T09:45:47.1777551Z [36;1mecho "### Final Configuration" >> NOTES[0m
+2026-06-05T09:45:47.1777842Z [36;1mecho "\`\`\`" >> NOTES[0m
+2026-06-05T09:45:47.1778210Z [36;1mpython build.py $BUILD_ARGS --dry | sed '1s/^/font_config: /' >> NOTES[0m
+2026-06-05T09:45:47.1778592Z [36;1mecho "\`\`\`" >> NOTES[0m
+2026-06-05T09:45:47.1778966Z [36;1mgh release create "v$(date +%s)" fonts/archive/*.* --notes-file NOTES[0m
+2026-06-05T09:45:47.1805916Z shell: /usr/bin/bash -e {0}
+2026-06-05T09:45:47.1806158Z env:
+2026-06-05T09:45:47.1806421Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-06-05T09:45:47.1806873Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+2026-06-05T09:45:47.1807311Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-06-05T09:45:47.1807695Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-06-05T09:45:47.1808073Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-06-05T09:45:47.1808461Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+2026-06-05T09:45:47.1808900Z   BUILD_ARGS: --archive --nf --feat calt, cv01, cv32, cv34, cv35, cv36, ss06
+2026-06-05T09:45:47.1812623Z   GITHUB_TOKEN: ***
+2026-06-05T09:45:47.1812854Z ##[endgroup]
+2026-06-05T09:45:47.1861083Z Error: Failed to build font, please check [Run custom script] step.
+2026-06-05T09:45:47.1864597Z ##[error]Process completed with exit code 1.
+2026-06-05T09:45:47.2310791Z Post job cleanup.
+2026-06-05T09:45:47.3299314Z [command]/usr/bin/git version
+2026-06-05T09:45:47.3345099Z git version 2.54.0
+2026-06-05T09:45:47.3409465Z Temporarily overriding HOME='/home/runner/work/_temp/82624525-63c6-4509-8440-e0746f20f004' before making global git config changes
+2026-06-05T09:45:47.3411069Z Adding repository directory to the temporary git global config as a safe directory
+2026-06-05T09:45:47.3426547Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/maple-font/maple-font
+2026-06-05T09:45:47.3472841Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-06-05T09:45:47.3512304Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-06-05T09:45:47.3763094Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-06-05T09:45:47.3788541Z http.https://github.com/.extraheader
+2026-06-05T09:45:47.3805085Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-06-05T09:45:47.3841660Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-06-05T09:45:47.4081001Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-06-05T09:45:47.4115027Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-06-05T09:45:47.4468777Z Cleaning up orphan processes
+2026-06-05T09:45:47.4765165Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/setup-python@v5. Actions will be forced to run with Node.js 24 by default starting June 16th, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

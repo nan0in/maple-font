@@ -206,7 +206,7 @@ def parse_args(args: list[str] | None = None):
         "--width",
         type=str,
         choices=WIDTH_MAP.keys(),
-        default="default",
+        default=None,
         help="Set glyph width: default (600), narrow (550), slim (500)",
     )
     feature_group.add_argument(
@@ -492,7 +492,7 @@ class FontConfig:
         if args.remove_tag_liga:
             self.remove_tag_liga = True
 
-        if args.width:
+        if args.width is not None:
             self.width = args.width
 
         if args.line_height is not None:
@@ -505,8 +505,6 @@ class FontConfig:
         """Apply Nerd Font specific arguments."""
         if self.debug:
             self.nerd_font["enable"] = False
-        if args.nerd_font is not None:
-            self.nerd_font["enable"] = args.nerd_font
 
         if args.nf_mono:
             self.nerd_font["mono"] = args.nf_mono
@@ -515,6 +513,9 @@ class FontConfig:
         if args.nf_propo:
             self.nerd_font["propo"] = args.nf_propo
             self.nerd_font["enable"] = True
+
+        if args.nerd_font is not None:
+            self.nerd_font["enable"] = args.nerd_font
 
     def _apply_cn_options(self, args):
         """Apply Chinese font related arguments."""
@@ -1352,7 +1353,7 @@ def build_cn(f: str, font_config: FontConfig, build_option: BuildOption):
         preferred_style_name=style_in_17,
     )
 
-    cn_font["OS/2"].xAvgCharWidth = 600  # type: ignore
+    cn_font["OS/2"].xAvgCharWidth = font_config.get_target_width()  # type: ignore
 
     # https://github.com/subframe7536/maple-font/issues/188
     # https://github.com/subframe7536/maple-font/issues/313
@@ -1379,7 +1380,7 @@ def build_cn(f: str, font_config: FontConfig, build_option: BuildOption):
         # Change glyph width and keep monospace identifier will cause
         # Intellij IDEA / Windows Notepad and other applications to
         # render the font incorrectly. See details in #249
-        if target_width:
+        if target_width and font_config.get_width_name() != "slim":
             cn_font["post"].isFixedPitch = False  # type: ignore
             cn_font["OS/2"].panose.bProportion = 0  # type: ignore
             cn_font["OS/2"].panose.bSpacing = 0  # type: ignore
